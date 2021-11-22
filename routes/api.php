@@ -18,6 +18,8 @@ use App\Http\Controllers\PassportAuthController;
 Route::post('register', [PassportAuthController::class, 'register']);
 Route::post('login', [PassportAuthController::class, 'login']);
 
-/*Route::middleware('auth:api')->group(function () {
-    Route::resource('posts', PostController::class);
-});*/
+Route::middleware('auth:api')->group(function () {
+    //Route::resource('posts', PostController::class);
+    Route::post('validate', [PassportAuthController::class, 'isValidToken']);
+    Route::post('reset', [PassportAuthController::class, 'reset']);
+});
