@@ -25,5 +25,16 @@ class Dictionaries extends Model
      */
     protected $primaryKey = 'dict_id';
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'title',
+        'description',
+    ];
+
 
 }
