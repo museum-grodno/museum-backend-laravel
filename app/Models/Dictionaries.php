@@ -25,5 +25,11 @@ class Dictionaries extends Model
      */
     protected $primaryKey = 'dict_id';
 
+    protected $fillable = [
+        'name',
+        'title',
+        'description'
+    ];
+
 
 }

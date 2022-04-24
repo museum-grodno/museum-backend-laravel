@@ -6,3 +6,10 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+/modules.xml
+/museum-backend-laravel.iml
+/php.xml
+/phpunit.xml
+/vagrant.xml
+/vcs.xml
+/vendor/
