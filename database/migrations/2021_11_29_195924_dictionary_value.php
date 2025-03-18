@@ -16,12 +16,12 @@ class DictionaryValue extends Migration
         // Таблица значений справочников
 
         Schema::create('dictionary_value', function (Blueprint $table) {
-            $table->unsignedBigInteger('dict_id');
+            $table->unsignedBigInteger('dict_id')->primary();
             $table->foreign('dict_id')
                     ->references('dict_id')
                     ->on('dictionaries')
                     ->restrictOnDelete();
-            $table->integer('dict_value_id');
+            $table->integer('dict_value_id')->primary();
             $table->text('value');
         });
     }

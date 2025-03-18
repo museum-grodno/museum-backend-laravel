@@ -57,7 +57,7 @@ class PassportAuthController extends Controller
 
         } else {
 
-            return response()->json(['error' => 'Доступ закрыт'], 401);
+            return response()->json(['error' => 'Доступ закрыт','data'=>$data], 401);
 
         }
     }

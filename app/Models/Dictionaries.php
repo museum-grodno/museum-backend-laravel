@@ -2,9 +2,12 @@
 
 namespace App\Models;
 
+use DictionaryValue;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
 
 class Dictionaries extends Model
 {
@@ -17,6 +20,8 @@ class Dictionaries extends Model
      */
 
     protected $table='dictionaries';
+
+    public $timestamps = false;
 
     /**
      * Первичный ключ таблицы БД.
@@ -31,5 +36,9 @@ class Dictionaries extends Model
         'description'
     ];
 
+    public function  dictionaryValue(): HasMany
+    {
+        return $this->hasMany(DictionaryValue::class, 'dict_id', 'dict_id');
+    }
 
 }
