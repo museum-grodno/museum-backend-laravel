@@ -28,21 +28,29 @@ class RequestTourInfo extends Model
      protected $primaryKey = 'rq_id';
 
      protected $fillable = [
+        'rq_id',
         'rq_object_id',
         'rq_date_info',
         'rq_time_start',
         'rq_count_customers',
+         'rq_object_id',
         'rq_is_excursions',
         'rq_organisation_name',
         'rq_organisation_address',
         'rq_organisation_unp',
         'rq_organisation_rs',
         'rq_organisation_contacts',
-        'rq_organisation_email'
+        'rq_organisation_email',
+        'rq_count_customers_old',
+        'rq_count_customers_pensioner',
+        'rq_count_customers_student',
+         'rq_count_customers_pupil',
+        'rq_count_customers_toddler',
+        'rq_count_customers_lgotniki',
      ];
 
      protected $hidden = [
-         'rq_id'
+
      ];
 
      protected $dateFormat = [
